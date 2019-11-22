@@ -12,11 +12,15 @@ The following **required** functionality is complete:
 
 * [X] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
+## Stretch tasks
+* [X] User can change default tip amount in Settings screen
+* [X] Validation for user input
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://recordit.co/Xhy8GlY1oc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://recordit.co/MpnDDBbeKq' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [recordit.co](http://www.recordit.co).
 
