@@ -4,7 +4,7 @@
 
 Submitted by: **Daniel Famakin**
 
-Time spent: **2.5** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
@@ -20,7 +20,7 @@ The following **required** functionality is complete:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://recordit.co/MpnDDBbeKq' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://recordit.co/MpnDDBbeKq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [recordit.co](http://www.recordit.co).
 
