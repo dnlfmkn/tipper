@@ -27,8 +27,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="KuB-hJ-a5N"/>
+                                    <action selector="validateBill:" destination="BYZ-38-t0r" eventType="editingChanged" id="Bt3-Uz-oha"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYU-yX-jpr">
@@ -79,7 +85,13 @@
                             <outletCollection property="gestureRecognizers" destination="bQw-dN-H1S" appends="YES" id="AZb-3e-aQO"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tipper" id="RE3-Tl-enV"/>
+                    <navigationItem key="navigationItem" title="Tipper" id="RE3-Tl-enV">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="d7F-rH-5nH">
+                            <connections>
+                                <segue destination="rli-Rc-hJr" kind="show" id="dgc-FF-6EJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="ydG-sB-Yj6" id="Zl2-wW-OmY"/>
                         <outlet property="tipControl" destination="xVR-s6-L6U" id="byq-L2-25C"/>
@@ -94,7 +106,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="141.59999999999999" y="203.74812593703149"/>
+            <point key="canvasLocation" x="-28546" y="333"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOv-iH-OFt">
@@ -113,6 +125,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2Y-hS-njb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7118" y="250"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="v7w-tL-WU5">
+            <objects>
+                <viewController id="rli-Rc-hJr" customClass="SettingsViewController" customModule="tipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D9N-HO-fJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAV-cs-KRg">
+                                <rect key="frame" x="16" y="88" width="95" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-tK-eL0">
+                                <rect key="frame" x="181" y="87" width="178" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSelectDefaultTip:" destination="rli-Rc-hJr" eventType="valueChanged" id="DCC-mA-Cti"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DKR-Sr-s8t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tTQ-Yp-cdP"/>
+                    <connections>
+                        <outlet property="defaultTipChooser" destination="Yr8-tK-eL0" id="dGW-a3-TMg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TkQ-sG-eRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="190"/>
         </scene>
     </scenes>
 </document>
