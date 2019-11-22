@@ -20,7 +20,8 @@ class SettingsViewController: UIViewController {
     }
     
     // callback for default tip chooser
-    @IBAction func onSelectDefaultTip(_ sender: Any) {        preferences.set(defaultTipChooser.selectedSegmentIndex, forKey: "default_tip") // obtain index of selected defult tip
+    @IBAction func onSelectDefaultTip(_ sender: Any) {
+        preferences.set(defaultTipChooser.selectedSegmentIndex, forKey: "default_tip") // obtain index of selected defult tip
         preferences.synchronize() // save defaults to disk
     }
 }
