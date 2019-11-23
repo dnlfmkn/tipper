@@ -153,6 +153,24 @@
                                     <action selector="onSelectDefaultTip:" destination="rli-Rc-hJr" eventType="valueChanged" id="DCC-mA-Cti"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-Ad-qXU">
+                                <rect key="frame" x="24" y="155" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-vS-e6U">
+                                <rect key="frame" x="258" y="150" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onModeChange:" destination="rli-Rc-hJr" eventType="valueChanged" id="L4C-gd-srV"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="DKR-Sr-s8t"/>
@@ -160,11 +178,12 @@
                     <navigationItem key="navigationItem" id="tTQ-Yp-cdP"/>
                     <connections>
                         <outlet property="defaultTipChooser" destination="Yr8-tK-eL0" id="dGW-a3-TMg"/>
+                        <outlet property="modeControl" destination="Ctt-vS-e6U" id="vDv-yX-93Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkQ-sG-eRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="190"/>
+            <point key="canvasLocation" x="862" y="78"/>
         </scene>
     </scenes>
 </document>

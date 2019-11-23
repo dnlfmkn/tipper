@@ -18,12 +18,20 @@ class ViewController: UIViewController {
     let preferences = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (preferences.object(forKey: "mode") == nil) {
+            preferences.set(0, forKey: "mode")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        // load the default tip
+        // load the default tip and mode
+        overrideUserInterfaceStyle = preferences.integer(forKey: "mode") == 0 ? .light : .dark
         tipControl.selectedSegmentIndex = preferences.integer(forKey: "default_tip")
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        
     }
 
     @IBAction func validateBill(_ sender: Any) {
